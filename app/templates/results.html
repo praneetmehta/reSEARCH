@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+{% block content %}
+	<div id="results_holder">
+		{% for doc in results %}
+		<div class="search_result">
+			<a class="close hide hidden">x</a>
+			<h2 class="title">{{doc.title}}</h2>
+			<h4 class="auth">{{doc.authors}}</h3>
+			<h4 class="sub">{{doc.subject}}</h4>
+			<p class="doc_text">{{ doc.doc_text }}</p>
+			<div class="keywords">
+				{% for keyword in doc.keywords %}
+				<div class="keyword">{{keyword.key}}</div>
+				{% endfor %}
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+{% endblock %}
