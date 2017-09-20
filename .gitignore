@@ -1,2 +1,4 @@
 Unstructured_/
 *.pyc
+trie/
+doc2idx/

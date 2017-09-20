@@ -7,6 +7,13 @@ directory = os.path.join('../Unstructured_','abstract_')
 
 filelist = os.listdir(directory)
 
+if not os.path.exists('../doc2idx'):
+    try:
+        os.makedirs('../doc2idx')
+    except OSError as exc: # Guard against race condition
+        if exc.errno != errno.EEXIST:
+            raise
+            
 file_to_idx={}
 for file_idx, filename in enumerate(filelist):
 	file_to_idx[file_idx]=filename[:-4]

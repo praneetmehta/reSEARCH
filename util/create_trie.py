@@ -15,6 +15,13 @@ directory = os.path.join('../Unstructured_','abstract_')
 
 filelist = os.listdir(directory)
 
+if not os.path.exists('../trie'):
+    try:
+        os.makedirs('../trie')
+    except OSError as exc: # Guard against race condition
+        if exc.errno != errno.EEXIST:
+            raise
+            
 start_time=time()
 # tkn = []
 for f in enumerate(filelist):
