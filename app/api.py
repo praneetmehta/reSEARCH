@@ -30,10 +30,12 @@ def api_fetchDocs():
 	processed_text = app.config['processor'].processText(query)
 	print(processed_text)
 	rel_docs = app.config['vector'].get_relevant_docs(processed_text)
+	# print rel_docs
 	# docs = t.fetch_docs(processed_text)
 	results = []
 	root = 'Unstructured_/'
 	for doc in rel_docs:
+		doc = app.config['doc2idx'][doc[0]]
 		temp = {
 			'title':'Title',
 			'authors':'Authors',
@@ -43,6 +45,10 @@ def api_fetchDocs():
 		}
 		with open(root+'abstract_/'+doc+'.txt', 'r') as file:
 			temp['doc_text'] = file.read()
+			keywords = app.config['vector'].fetch_keywords(temp['doc_text'])
+			temp['keywords'] = []
+			for keyword in keywords:
+				temp['keywords'].append({'key':keyword[0].title()})
 		with open(root+'title/'+doc+'.txt','r') as file:
 			temp['title'] = file.read()
 		with open(root+'authors/'+doc+'.txt','r') as file:

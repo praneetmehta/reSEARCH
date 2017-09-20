@@ -43,11 +43,10 @@ socket.on('update_results', function(data){
 	keys = ''
 	for(entry in data){
 		keyarray = data[entry]['keywords']
-		console.log(keyarray)
 		for(key in keyarray){
 			keys+= '<div class="keyword">'+keyarray[key]['key']+'</div>'
 		}
-		html+='<div class="search_result"><button class="close hide hidden">x</button><h2 class="title">'+data[entry]['title']+'</h2><h4 class="auth">'+data[entry]['authors']+'</h3><h4 class="sub">'+data[entry]['subject']+'</h4><p class="doc_text">'+data[entry]['doc_text']+'</p><div class="keywords">'+keys+'</div></div>'
+		html+='<div class="search_result"><button class="close hide hidden">x</button><h2 class="title">'+data[entry]['title']+'</h2><h4 class="auth">'+data[entry]['authors']+'</h3><h4 class="sub">'+data[entry]['subject']+'</h4><p class="doc_text">'+data[entry]['doc_text']+'</p><div class="keywords">'+keys+'</div><div class="search_similar">Similar</div></div>'
 		keys = ''
 	}
 	$('#results_holder').empty();

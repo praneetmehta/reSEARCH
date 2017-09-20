@@ -27,6 +27,29 @@ function bind(){
 			par.removeClass('hide hidden');
 			par.find('p').css({'display':'none'});
 		},300);
+	});
+
+	$('.keyword').click(function(evt){
+		evt.stopPropagation();
+		value = $(this).text();
+		$('#query_text').val(value);
+		socket.emit('query_submit', {
+			data:value
+		});
+	});
+	$('.search_similar').click(function(evt){
+		ele = $(this)
+		evt.stopPropagation();
+		value = '';
+		keys = ele.parent().find('div.keywords').children().each(function(){
+			value+= $(this).text()+ ' ';
+		});
+
+		$('#query_text').val(value);
+		console.log(value);
+		socket.emit('query_submit', {
+			data:value
+		});
 	})
 }
 

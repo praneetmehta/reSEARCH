@@ -1,7 +1,9 @@
+from __future__ import division
 import sys
 sys.path.insert(0, '../')
 from trie import *
 from time import time
+import numpy as np
 import textpreprocess
 try:
 	processor = textpreprocess.Process(sys.argv[1])
@@ -30,9 +32,14 @@ for f in enumerate(filelist):
 	with open(os.path.join(directory, f[1]), 'r') as file:
 		tokens = processor.processText(file.read())
 		# tkn+=tokens
+		normalization_factor = len(tokens)
 		temp=Counter(tokens)
+		# normalization_factor = 0
+		# for word in temp.keys():
+		# 	normalization_factor+=temp[word]**2
+		# normalization_factor = np.sqrt(normalization_factor)
 		for word in temp.keys():
-			tr.check(word, f[1][:-4], temp[word])
+			tr.check(word, f[1][:-4], temp[word]/normalization_factor)
 tr.update_leaf_count(len(filelist))
 print('Trie saved to:', save_trie(tr, '../trie/'+filename))
 print('Trie created in:', time()-start_time)

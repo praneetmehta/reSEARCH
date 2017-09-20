@@ -21,15 +21,28 @@ class VectorSpaceModel:
 				query_weight = query_list[word]*query_idf
 				for key in query_eles.keys():
 					if(key.strip() != '' and key.strip() != 'idf'):
-						score = query_eles[key]*query_idf
+						score = query_eles[key]*query_idf*query_weight
 						self.scores[self.doc2idx[key]][0] = self.doc2idx[key]
 						self.scores[self.doc2idx[key]][1] += score
 			except:
 				pass
 		self.top10 = self.scores[self.scores[:,1].argsort()[::-1]][:10]
-		self.suggested_docs = [self.doc2idx[i[0]] for i in self.top10 if i[1] != 0]
+		self.suggested_docs = [i for i in self.top10 if i[1] != 0]
 		return self.suggested_docs
 
+	def fetch_keywords(self, doc_text, threshold=10):
+		tokens = tp.processText(doc_text)
+		keys = Counter(tokens)
+		self.pair = []
+		for key in keys:
+			imp = keys[key]*self.trie.check(key)['idf']
+			if(imp>threshold):
+				self.pair.append([key, int(imp)])
+		self.pair = sorted(self.pair,key=lambda l:l[1], reverse=True)
+		return self.pair[:5]
+		# top_keywords = self.pair[self.pair[:,1].argsort()[::-1]][:4]
+		# print(top_keywords)
+		# print('-------------------')
 
 if __name__ == '__main__':
 	trie = read_trie('trie/trie_l.pkl')
