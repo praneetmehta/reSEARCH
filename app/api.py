@@ -28,7 +28,7 @@ def api_autoComplete():
 def api_fetchDocs():
 	query = request.args.get('query')
 	processed_text = app.config['processor'].processText(query)
-	print processed_text
+	print(processed_text)
 	rel_docs = app.config['vector'].get_relevant_docs(processed_text)
 	# docs = t.fetch_docs(processed_text)
 	results = []

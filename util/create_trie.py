@@ -21,12 +21,12 @@ if not os.path.exists('../trie'):
     except OSError as exc: # Guard against race condition
         if exc.errno != errno.EEXIST:
             raise
-            
+
 start_time=time()
 # tkn = []
 for f in enumerate(filelist):
 	if(f[0]%10 == 0):
-		print f[0]
+		print(f[0])
 	with open(os.path.join(directory, f[1]), 'r') as file:
 		tokens = processor.processText(file.read())
 		# tkn+=tokens

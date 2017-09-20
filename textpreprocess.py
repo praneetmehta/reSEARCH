@@ -56,7 +56,7 @@ def readFiles():
 	filelist = os.listdir(directory2)
 	for f in enumerate(filelist[1:10]):
 		if(f[0]%1000 == 0):
-			print f[0]
+			print(f[0])
 		newtext = ''
 		with open(os.path.join(directory2, f[1]), 'r') as file:
 			processor.processText(file.read())
@@ -64,5 +64,5 @@ def readFiles():
 		# 	file.write(newtext)
 
 if __name__ == "__main__":
-	print 'starting'
+	print('starting')
 	# readFiles()

@@ -36,5 +36,5 @@ if __name__ == '__main__':
 	doc2idx = read_trie('doc2idx/doc2idx.pkl')
 	v = VectorSpaceModel(trie, doc2idx)
 	start_time = time()
-	print v.get_relevant_docs(['neural', 'network', 'nigga'])
+	print(v.get_relevant_docs(['neural', 'network', 'nigga']))
 	print(time()-start_time)
