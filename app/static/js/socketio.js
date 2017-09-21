@@ -41,14 +41,16 @@ function submit_query(){
 socket.on('update_results', function(data){
 	html = ''
 	keys = ''
-	for(entry in data){
+	for(entry in data.slice(0,data.length - 1)){
+		link = data[entry]['link']
 		keyarray = data[entry]['keywords']
 		for(key in keyarray){
 			keys+= '<div class="keyword">'+keyarray[key]['key']+'</div>'
 		}
-		html+='<div class="search_result"><button class="close hide hidden">x</button><h2 class="title">'+data[entry]['title']+'</h2><h4 class="auth">'+data[entry]['authors']+'</h3><h4 class="sub">'+data[entry]['subject']+'</h4><p class="doc_text">'+data[entry]['doc_text']+'</p><div class="keywords">'+keys+'</div><div class="search_similar">Similar</div></div>'
+		html+='<div class="search_result"><button class="close hide hidden">x</button><h2 class="title">'+data[entry]['title']+'</h2><h4 class="auth">'+data[entry]['authors']+'</h3><h4 class="sub">'+data[entry]['subject']+'</h4><p class="doc_text">'+data[entry]['doc_text']+'</p><div class="keywords">'+keys+'</div><div class="download"><a href='+link+' download><img src="static/img/download.png" style="width:100%; height:100%"></a></div><div class="search_similar">Similar</div></div>'
 		keys = ''
 	}
+	display_time_results(data[data.length-1]);
 	$('#results_holder').empty();
 	$('#results_holder').html(html);
 	bind();

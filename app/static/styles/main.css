@@ -135,3 +135,22 @@ h3, h4, h5, h6{
 	box-shadow: 0 0 5px gray;
 	background-color: linear-gradient(white, #eee);
 }
+#time_container{
+	position: absolute;
+	width: 80%;
+	background: #eee;
+	padding: 30px;
+	transform: translateY(-100%);
+	transition: all 1s;
+	box-shadow: 0 0 5px gray;
+	opacity: 0;
+}
+
+.download{
+	width: 35px;
+	height: 35px;
+	float: right;
+	margin: -5px 15px;
+	opacity: 0;
+	transition: all .9s;
+}

@@ -13,7 +13,7 @@ stemmer = PorterStemmer()
 stop=set(stopwords.words('english'))
 
 class Process:
-	def __init__(self, token_type):
+	def __init__(self, token_type='n'):
 		self.type = token_type
 
 	def processFile(self, text):
@@ -49,20 +49,23 @@ class Process:
 		lemmetized = [wordnet_lemmatizer.lemmatize(token) for token in tokens]
 		return lemmetized
 
-def readFiles():
-	processor = Process()
-	directory = os.path.join('Unstructured_','abstract')
-	directory2 = os.path.join('Unstructured_','abstract_')
-	filelist = os.listdir(directory2)
-	for f in enumerate(filelist[1:10]):
-		if(f[0]%1000 == 0):
-			print(f[0])
-		newtext = ''
-		with open(os.path.join(directory2, f[1]), 'r') as file:
-			processor.processText(file.read())
-		# with open(os.path.join(directory2, f[1]), 'w+') as file:
-		# 	file.write(newtext)
+	def readAndProcessFiles(self, directory=os.path.join('../Unstructured_','abstract'), directory2=os.path.join('../Unstructured_','abstract_')):
+		if not os.path.exists(directory2):
+		    try:
+		        os.makedirs(directory2)
+		    except OSError as exc: # Guard against race condition
+		        if exc.errno != errno.EEXIST:
+		            raise
+		            
+		filelist = os.listdir(directory)
+		for f in enumerate(filelist):
+			if(f[0]%1000 == 0):
+				print(f[0])
+			newtext = ''
+			with open(os.path.join(directory, f[1]), 'r') as file:
+				newtext = self.processFile(file.read())
+			with open(os.path.join(directory2, f[1]), 'w+') as file:
+				file.write(newtext)
 
 if __name__ == "__main__":
 	print('starting')
-	# readFiles()
