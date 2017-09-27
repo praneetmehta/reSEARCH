@@ -10,7 +10,7 @@ app.config['ADDRESS'] = '0.0.0.0'
 app.config['PORT'] = 8080
 app.config['PATH'] = app.config['ADDRESS'] + ':' + str(app.config['PORT'])
 app.config['trie'] = None
-app.config['DATA_ROOT'] = 'Unstructured_'
+app.config['DATA_ROOT'] = 'Unstructured_/'
 
 #create socketio stream instance with flask app
 socketio = SocketIO(app, logger=False, engineio_logger=False, async_mode = 'gevent')
