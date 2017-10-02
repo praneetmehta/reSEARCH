@@ -24,6 +24,7 @@ Course Assignment for CS F469- Information Retrieval @ BITS Pilani, Hyderabad Ca
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
+For setup run the following commands in order:
 
 ##### Running the scraper
 ```python
@@ -63,6 +64,7 @@ We use the following data  of **16000** papers from all categories present on Ar
 ***Note**: Only Abstract data has been used for searching.*
 
 The data is organized into directories as follows:
+
 Data/
 ├── abstracts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   # text files containing the abstract
 
