@@ -116,15 +116,21 @@ Retrieval time statistics:
 
 [logo]: time.JPG "Logo Title Text 2"
 
+---
+
 Search results:
 ![alt text][logo1]
 
 [logo1]: results.JPG "Logo Title Text 2"
 
+---
+
 Search suggestions:
 ![alt text][logo2]
 
 [logo2]: suggestions.JPG "Logo Title Text 2"
+
+---
 
 Document view:
 ![alt text][logo3]
