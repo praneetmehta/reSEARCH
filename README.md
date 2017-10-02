@@ -150,7 +150,3 @@ Document view:
 [Abhinav Jain](github.com/abhinav1112)
 
 [Saurabh Khandelwal](http://github.com/stgstg27)
-<<<<<<< HEAD
-
-=======
->>>>>>> f4ed0f5db05c390fd128a84a4043474233a33fd8
