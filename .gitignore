@@ -1,4 +1,4 @@
-Unstructured_/
+data/
+src/trie/
+src/doc2idx/
 *.pyc
-trie/
-doc2idx/

@@ -1,0 +1,156 @@
+html, body{
+	width: 94%;
+	font-family: 'Montserrat';
+	font-weight: 300;
+	background: white;
+	padding: 0px 3%;
+}
+
+#main{
+	padding: 5%;
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+#form{
+	width: 96%;
+	padding: 2%
+}
+form{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+form div{
+	width: 100%;
+}
+#form_1{
+	width: 70%;
+}
+
+#form_2{
+	width: 25%;
+}
+
+#query_text{
+	width: 100%;
+	padding:15px;
+	border-radius: 4px;
+}
+
+#submit_query{
+	width: 100%;
+	padding:15px;
+	border-radius: 4px;
+	background: #d33;
+	color: white;
+	letter-spacing: 3px;
+	border:none;
+	box-shadow: 0 0 4px #700; 
+	cursor: pointer;
+}
+#results_holder{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	position: relative;
+	overflow-x: auto;
+}
+.search_result{
+	width: 92%;
+	margin:1% 2%;
+	padding: 1% 2%;
+	border-radius: 0px;
+	box-shadow: 0 0 7px -1px #bbb;
+	transition: all 0.3s;
+	display: block;
+	position: relative;
+	top: 0px;
+}
+
+.search_result:hover{
+	box-shadow: 2px 2px 15px 1px #bbb;
+	transform: scale(1.03,1.03);
+	cursor: pointer;
+}
+
+h1, h2{
+	font-weight: 400;
+	margin: 5px 0;
+}
+h3, h4, h5, h6{
+	font-weight: 300;
+	padding: 0;
+	margin:8px 0;
+	text-align: left;
+}
+.keywords{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+.keyword{
+	margin: 4px 10px 4px 0;
+	background: rgba(0,0,255,0.5);
+	padding: 4px 6px;
+	font-size: .75em;
+	letter-spacing: 1px;
+	border-radius: 3px;
+}
+.title, .auth, .sub{
+	font-size: .9em;
+}
+
+.doc_text{
+	display: none;
+}
+.clicked{
+	position: absolute;
+	top: 50px;
+	min-height: 30vh;
+	max-height:60vh;
+	max-width:80vw;
+	background:rgba(255,255,255,1);
+	transform:scale(1.03,1.03);	
+}
+
+.hide{
+	opacity: 0;
+}
+.hidden{
+	visibility: hidden;
+}
+
+.close{
+	position: absolute;
+	top: 0px;
+	right: 10px;
+}
+.search_similar{
+	display: inline-block;
+	float: right;
+	padding: 5px;
+	box-shadow: 0 0 5px gray;
+	background-color: linear-gradient(white, #eee);
+}
+#time_container{
+	position: absolute;
+	width: 80%;
+	background: #eee;
+	padding: 30px;
+	transform: translateY(-100%);
+	transition: all 1s;
+	box-shadow: 0 0 5px gray;
+	opacity: 0;
+}
+
+.download{
+	width: 35px;
+	height: 35px;
+	float: right;
+	margin: -5px 15px;
+	opacity: 0;
+	transition: all .9s;
+}

@@ -1,0 +1,122 @@
+\hypertarget{classtextpreprocess_1_1_process}{}\section{textpreprocess.\+Process Class Reference}
+\label{classtextpreprocess_1_1_process}\index{textpreprocess.\+Process@{textpreprocess.\+Process}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, token\+\_\+type=\textquotesingle{}n\textquotesingle{})\hypertarget{classtextpreprocess_1_1_process_a11ddde752763b87b089e5e709e7531d8}{}\label{classtextpreprocess_1_1_process_a11ddde752763b87b089e5e709e7531d8}
+
+\item 
+def \hyperlink{classtextpreprocess_1_1_process_a8ae54384642ccd5f1a682616f3aa90ae}{process\+File} (self, text)
+\item 
+def \hyperlink{classtextpreprocess_1_1_process_a55c261cfbf99c7c085c21b652a051c0b}{process\+Text} (self, text)
+\item 
+def \hyperlink{classtextpreprocess_1_1_process_a6523f58d5c1028d39e30363452044d60}{stem} (self, tokens)
+\item 
+def \hyperlink{classtextpreprocess_1_1_process_a3b12c1d82f82ade3033cc4fe071c3d67}{lemmetize} (self, tokens)
+\item 
+def \hyperlink{classtextpreprocess_1_1_process_a7fdd646913124569913bc838f88a9ffe}{read\+And\+Process\+Files} (self, directory=os.\+path.\+join(\textquotesingle{}../Unstructured\+\_\+\textquotesingle{},\textquotesingle{}abstract\textquotesingle{}), directory2=os.\+path.\+join(\textquotesingle{}../Unstructured\+\_\+\textquotesingle{},\textquotesingle{}abstract\+\_\+\textquotesingle{}))
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries type}\hypertarget{classtextpreprocess_1_1_process_a79fe786561553b771bf7db0759d6d311}{}\label{classtextpreprocess_1_1_process_a79fe786561553b771bf7db0759d6d311}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}This class is used for preprocessing text in files and queries, and tokenising 
+them after various preprocessing steps such as stemming and lemmetization\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\index{textpreprocess\+::\+Process@{textpreprocess\+::\+Process}!lemmetize@{lemmetize}}
+\index{lemmetize@{lemmetize}!textpreprocess\+::\+Process@{textpreprocess\+::\+Process}}
+\subsubsection[{\texorpdfstring{lemmetize(self, tokens)}{lemmetize(self, tokens)}}]{\setlength{\rightskip}{0pt plus 5cm}def textpreprocess.\+Process.\+lemmetize (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{tokens}
+\end{DoxyParamCaption}
+)}\hypertarget{classtextpreprocess_1_1_process_a3b12c1d82f82ade3033cc4fe071c3d67}{}\label{classtextpreprocess_1_1_process_a3b12c1d82f82ade3033cc4fe071c3d67}
+\begin{DoxyVerb}returns tokens after lemmatization
+
+    This function lemmatizes all the tokens 
+
+    :param text: tokens
+    :type text: list of strings
+    :returns: lemmatized
+    :rtype: list of strings
+\end{DoxyVerb}
+ \index{textpreprocess\+::\+Process@{textpreprocess\+::\+Process}!process\+File@{process\+File}}
+\index{process\+File@{process\+File}!textpreprocess\+::\+Process@{textpreprocess\+::\+Process}}
+\subsubsection[{\texorpdfstring{process\+File(self, text)}{processFile(self, text)}}]{\setlength{\rightskip}{0pt plus 5cm}def textpreprocess.\+Process.\+process\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{text}
+\end{DoxyParamCaption}
+)}\hypertarget{classtextpreprocess_1_1_process_a8ae54384642ccd5f1a682616f3aa90ae}{}\label{classtextpreprocess_1_1_process_a8ae54384642ccd5f1a682616f3aa90ae}
+\begin{DoxyVerb}returns the processed files
+
+It removes the special characters from the files, and certain expressions which were 
+converted from the scientific symbols. It then tokenises the file and then writes 
+the tokens into the file with length greater than 1 
+
+:param text: the text file to be processed
+:type text: text file
+:returns: file
+:rtype: text file
+\end{DoxyVerb}
+ \index{textpreprocess\+::\+Process@{textpreprocess\+::\+Process}!process\+Text@{process\+Text}}
+\index{process\+Text@{process\+Text}!textpreprocess\+::\+Process@{textpreprocess\+::\+Process}}
+\subsubsection[{\texorpdfstring{process\+Text(self, text)}{processText(self, text)}}]{\setlength{\rightskip}{0pt plus 5cm}def textpreprocess.\+Process.\+process\+Text (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{text}
+\end{DoxyParamCaption}
+)}\hypertarget{classtextpreprocess_1_1_process_a55c261cfbf99c7c085c21b652a051c0b}{}\label{classtextpreprocess_1_1_process_a55c261cfbf99c7c085c21b652a051c0b}
+\begin{DoxyVerb}returns list of strings after preprocessing
+
+    used for preprocessing words for insertion in the trie and query preprocessing.
+    It converts all the characters to lower case, and uses stemming or lemetization according to need.
+    It removes all the stop words and keeps only words whose length is greater than 2.
+
+    :param text: files, query for preprocessing
+    :type text: text file, string
+    :returns: tokens
+    :rtype: list of strings
+\end{DoxyVerb}
+ \index{textpreprocess\+::\+Process@{textpreprocess\+::\+Process}!read\+And\+Process\+Files@{read\+And\+Process\+Files}}
+\index{read\+And\+Process\+Files@{read\+And\+Process\+Files}!textpreprocess\+::\+Process@{textpreprocess\+::\+Process}}
+\subsubsection[{\texorpdfstring{read\+And\+Process\+Files(self, directory=os.\+path.\+join(\textquotesingle{}../\+Unstructured\+\_\+\textquotesingle{},\textquotesingle{}abstract\textquotesingle{}), directory2=os.\+path.\+join(\textquotesingle{}../\+Unstructured\+\_\+\textquotesingle{},\textquotesingle{}abstract\+\_\+\textquotesingle{}))}{readAndProcessFiles(self, directory=os.path.join('../Unstructured_','abstract'), directory2=os.path.join('../Unstructured_','abstract_'))}}]{\setlength{\rightskip}{0pt plus 5cm}def textpreprocess.\+Process.\+read\+And\+Process\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{directory = {\ttfamily os.path.join(\textquotesingle{}../Unstructured\+\_\+\textquotesingle{},\textquotesingle{}abstract\textquotesingle{})}, }
+\item[{}]{directory2 = {\ttfamily os.path.join(\textquotesingle{}../Unstructured\+\_\+\textquotesingle{},\textquotesingle{}abstract\+\_\+\textquotesingle{})}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtextpreprocess_1_1_process_a7fdd646913124569913bc838f88a9ffe}{}\label{classtextpreprocess_1_1_process_a7fdd646913124569913bc838f88a9ffe}
+\begin{DoxyVerb}takes as input the directory from which the unprocessed files have to read and 
+    the directory onto which the new processed files will be written back.
+    If not specified, it takes the default values of input and output directories.
+\end{DoxyVerb}
+ \index{textpreprocess\+::\+Process@{textpreprocess\+::\+Process}!stem@{stem}}
+\index{stem@{stem}!textpreprocess\+::\+Process@{textpreprocess\+::\+Process}}
+\subsubsection[{\texorpdfstring{stem(self, tokens)}{stem(self, tokens)}}]{\setlength{\rightskip}{0pt plus 5cm}def textpreprocess.\+Process.\+stem (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{tokens}
+\end{DoxyParamCaption}
+)}\hypertarget{classtextpreprocess_1_1_process_a6523f58d5c1028d39e30363452044d60}{}\label{classtextpreprocess_1_1_process_a6523f58d5c1028d39e30363452044d60}
+\begin{DoxyVerb}returns tokens after stemming
+
+    This function stems all the tokens using Porter Stemmer
+
+    :param text: tokens
+    :type text: list of strings
+    :returns: stem_tokens
+    :rtype: list of strings
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/shubham/\+Desktop/re\+S\+E\+A\+R\+C\+H-\/master/src/textpreprocess.\+py\end{DoxyCompactItemize}

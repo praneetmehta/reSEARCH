@@ -1,0 +1,117 @@
+\hypertarget{classtrie_1_1_trie}{}\section{trie.\+Trie Class Reference}
+\label{classtrie_1_1_trie}\index{trie.\+Trie@{trie.\+Trie}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classtrie_1_1_trie_a36d10ddf184aa8944b366278e3652a2f}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classtrie_1_1_trie_a270bb01a8e9b3ab3459758746dc4e434}{check} (self, string, docname=\textquotesingle{}\textquotesingle{}, tf=0)
+\item 
+def \hyperlink{classtrie_1_1_trie_ad9c6106b14049f789df88d70d4cf36c1}{update\+\_\+leaf\+\_\+count} (self, no\+\_\+total\+\_\+docs)
+\item 
+def \hyperlink{classtrie_1_1_trie_a66c2c3035ba7e37a9f9ada5f3c55591d}{query\+\_\+suggestion} (self, string)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries children}\hypertarget{classtrie_1_1_trie_a1ad4feb4d215545f082dfdb48e28e25c}{}\label{classtrie_1_1_trie_a1ad4feb4d215545f082dfdb48e28e25c}
+
+\item 
+{\bfseries depth}\hypertarget{classtrie_1_1_trie_ae7936c113992d223e60620e6a5bf15e7}{}\label{classtrie_1_1_trie_ae7936c113992d223e60620e6a5bf15e7}
+
+\item 
+{\bfseries leaf\+\_\+count}\hypertarget{classtrie_1_1_trie_ad2560d8eda3b7d63a0b379f26618279d}{}\label{classtrie_1_1_trie_ad2560d8eda3b7d63a0b379f26618279d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Class that implements the trie. It is directly linked to the root node.\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{trie\+::\+Trie@{trie\+::\+Trie}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!trie\+::\+Trie@{trie\+::\+Trie}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self)}{__init__(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def trie.\+Trie.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classtrie_1_1_trie_a36d10ddf184aa8944b366278e3652a2f}{}\label{classtrie_1_1_trie_a36d10ddf184aa8944b366278e3652a2f}
+\begin{DoxyVerb}Constructor for the class Trie. It'll initialize a new Trie.
+
+Examples
+--------
+>>> t=Trie()
+This will initialize a new Trie.
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\index{trie\+::\+Trie@{trie\+::\+Trie}!check@{check}}
+\index{check@{check}!trie\+::\+Trie@{trie\+::\+Trie}}
+\subsubsection[{\texorpdfstring{check(self, string, docname=\textquotesingle{}\textquotesingle{}, tf=0)}{check(self, string, docname='', tf=0)}}]{\setlength{\rightskip}{0pt plus 5cm}def trie.\+Trie.\+check (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{string, }
+\item[{}]{docname = {\ttfamily \textquotesingle{}\textquotesingle{}}, }
+\item[{}]{tf = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtrie_1_1_trie_a270bb01a8e9b3ab3459758746dc4e434}{}\label{classtrie_1_1_trie_a270bb01a8e9b3ab3459758746dc4e434}
+\begin{DoxyVerb}Function that checks if a term is present in the trie. If present, the leaf node is updated
+with the new document and term-frequency. If not already present in the trie, a new leaf node
+is added to the trie.
+
+Parameters
+----------
+string : string
+    the string that is being checked for/inserted in the trie.
+docname : string, optional
+    name of the document where the string comes from. default ''.
+tf : int, optional
+    the term frequency of the term in the particular document. default 0.
+
+Usage
+-----
+>>> t=Trie(string='car', docname='doc_1', tf=15)
+This means that the word 'car' was present in the document named 'doc_1', 15 times.
+This string, along with it's tf value, will be inserted into the trie.\end{DoxyVerb}
+ \index{trie\+::\+Trie@{trie\+::\+Trie}!query\+\_\+suggestion@{query\+\_\+suggestion}}
+\index{query\+\_\+suggestion@{query\+\_\+suggestion}!trie\+::\+Trie@{trie\+::\+Trie}}
+\subsubsection[{\texorpdfstring{query\+\_\+suggestion(self, string)}{query_suggestion(self, string)}}]{\setlength{\rightskip}{0pt plus 5cm}def trie.\+Trie.\+query\+\_\+suggestion (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{classtrie_1_1_trie_a66c2c3035ba7e37a9f9ada5f3c55591d}{}\label{classtrie_1_1_trie_a66c2c3035ba7e37a9f9ada5f3c55591d}
+\begin{DoxyVerb}Function that returns the top word suggestions.
+
+Returns
+----------
+list of strings
+Returns a list of the top suggestions.
+\end{DoxyVerb}
+ \index{trie\+::\+Trie@{trie\+::\+Trie}!update\+\_\+leaf\+\_\+count@{update\+\_\+leaf\+\_\+count}}
+\index{update\+\_\+leaf\+\_\+count@{update\+\_\+leaf\+\_\+count}!trie\+::\+Trie@{trie\+::\+Trie}}
+\subsubsection[{\texorpdfstring{update\+\_\+leaf\+\_\+count(self, no\+\_\+total\+\_\+docs)}{update_leaf_count(self, no_total_docs)}}]{\setlength{\rightskip}{0pt plus 5cm}def trie.\+Trie.\+update\+\_\+leaf\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{no\+\_\+total\+\_\+docs}
+\end{DoxyParamCaption}
+)}\hypertarget{classtrie_1_1_trie_ad9c6106b14049f789df88d70d4cf36c1}{}\label{classtrie_1_1_trie_ad9c6106b14049f789df88d70d4cf36c1}
+\begin{DoxyVerb}Function that updates the leaf_count of a node and all it's child nodes.
+Call this funcntion only after the entire trie has been built.
+
+Parameters
+----------
+no_total_docs : integer
+    The trie that you wish to store to disk.
+
+Note
+-------
+    Call this function only after bulding the entire trie.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/shubham/\+Desktop/re\+S\+E\+A\+R\+C\+H-\/master/src/trie.\+py\end{DoxyCompactItemize}

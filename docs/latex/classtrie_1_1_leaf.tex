@@ -1,0 +1,91 @@
+\hypertarget{classtrie_1_1_leaf}{}\section{trie.\+Leaf Class Reference}
+\label{classtrie_1_1_leaf}\index{trie.\+Leaf@{trie.\+Leaf}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classtrie_1_1_leaf_a94532c800b40efc2149253b17ec0c4bb}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, string, docname=\textquotesingle{}I\+N\+V\+A\+L\+ID\textquotesingle{}, tf=0)
+\item 
+def \hyperlink{classtrie_1_1_leaf_a12744c5a7b2adc68b9c5db1d98d19043}{add\+\_\+doc} (self, docname=\textquotesingle{}I\+N\+V\+A\+L\+ID\textquotesingle{}, tf=0)
+\item 
+def \hyperlink{classtrie_1_1_leaf_aaa23c1a673b7551a8ad04a56dcc50bbc}{update\+\_\+idf} (self, no\+\_\+total\+\_\+docs)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries string}\hypertarget{classtrie_1_1_leaf_aeb8d812870e35169f236b42e2eaafb3c}{}\label{classtrie_1_1_leaf_aeb8d812870e35169f236b42e2eaafb3c}
+
+\item 
+{\bfseries docs}\hypertarget{classtrie_1_1_leaf_a9066db1d4e05860a45c113e9b611c90b}{}\label{classtrie_1_1_leaf_a9066db1d4e05860a45c113e9b611c90b}
+
+\item 
+{\bfseries df}\hypertarget{classtrie_1_1_leaf_ac6a1252426caf3b28952fc9f958b65ad}{}\label{classtrie_1_1_leaf_ac6a1252426caf3b28952fc9f958b65ad}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Class that implements a leaf node in the trie.
+\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{trie\+::\+Leaf@{trie\+::\+Leaf}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!trie\+::\+Leaf@{trie\+::\+Leaf}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self, string, docname=\textquotesingle{}\+I\+N\+V\+A\+L\+I\+D\textquotesingle{}, tf=0)}{__init__(self, string, docname='INVALID', tf=0)}}]{\setlength{\rightskip}{0pt plus 5cm}def trie.\+Leaf.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{string, }
+\item[{}]{docname = {\ttfamily \textquotesingle{}INVALID\textquotesingle{}}, }
+\item[{}]{tf = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtrie_1_1_leaf_a94532c800b40efc2149253b17ec0c4bb}{}\label{classtrie_1_1_leaf_a94532c800b40efc2149253b17ec0c4bb}
+\begin{DoxyVerb}Parameters
+----------
+string : string
+    the string that is being checked for/inserted in the trie.
+docname : string, optional
+    name of the document where the string comes from. By default 'INVALID'
+tf : int, optional
+    the term frequency of the term in the particular document. By default 0.
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\index{trie\+::\+Leaf@{trie\+::\+Leaf}!add\+\_\+doc@{add\+\_\+doc}}
+\index{add\+\_\+doc@{add\+\_\+doc}!trie\+::\+Leaf@{trie\+::\+Leaf}}
+\subsubsection[{\texorpdfstring{add\+\_\+doc(self, docname=\textquotesingle{}\+I\+N\+V\+A\+L\+I\+D\textquotesingle{}, tf=0)}{add_doc(self, docname='INVALID', tf=0)}}]{\setlength{\rightskip}{0pt plus 5cm}def trie.\+Leaf.\+add\+\_\+doc (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{docname = {\ttfamily \textquotesingle{}INVALID\textquotesingle{}}, }
+\item[{}]{tf = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classtrie_1_1_leaf_a12744c5a7b2adc68b9c5db1d98d19043}{}\label{classtrie_1_1_leaf_a12744c5a7b2adc68b9c5db1d98d19043}
+\begin{DoxyVerb}Function to add a document to the current leaf.
+
+Parameters
+----------
+docname : string
+    Name of the document to be added, default INVALID.
+filename : string
+    The name of the file in which you wish to save the Trie.
+\end{DoxyVerb}
+ \index{trie\+::\+Leaf@{trie\+::\+Leaf}!update\+\_\+idf@{update\+\_\+idf}}
+\index{update\+\_\+idf@{update\+\_\+idf}!trie\+::\+Leaf@{trie\+::\+Leaf}}
+\subsubsection[{\texorpdfstring{update\+\_\+idf(self, no\+\_\+total\+\_\+docs)}{update_idf(self, no_total_docs)}}]{\setlength{\rightskip}{0pt plus 5cm}def trie.\+Leaf.\+update\+\_\+idf (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{no\+\_\+total\+\_\+docs}
+\end{DoxyParamCaption}
+)}\hypertarget{classtrie_1_1_leaf_aaa23c1a673b7551a8ad04a56dcc50bbc}{}\label{classtrie_1_1_leaf_aaa23c1a673b7551a8ad04a56dcc50bbc}
+\begin{DoxyVerb}Update idf of the current term. Adds a term with key- 'idf' to self.docs.
+
+Parameters
+----------
+no_total_docs : int
+    Total number of documents in the corpus.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/shubham/\+Desktop/re\+S\+E\+A\+R\+C\+H-\/master/src/trie.\+py\end{DoxyCompactItemize}

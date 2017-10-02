@@ -1,0 +1,112 @@
+\hypertarget{classvector__space_1_1_evaluate}{}\section{vector\+\_\+space.\+Evaluate Class Reference}
+\label{classvector__space_1_1_evaluate}\index{vector\+\_\+space.\+Evaluate@{vector\+\_\+space.\+Evaluate}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classvector__space_1_1_evaluate_a0e393062023dc2594bf9c76854f08185}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, trie, doc2idx)
+\item 
+def \hyperlink{classvector__space_1_1_evaluate_aafcdd9a278f5cb4305d53b1c977c372d}{get\+\_\+relevant\+\_\+docs} (self, query, n=10)
+\item 
+def \hyperlink{classvector__space_1_1_evaluate_ac561d193195b176f1661334c8c42336b}{fetch\+\_\+keywords} (self, doc\+\_\+text, threshold=10)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries trie}\hypertarget{classvector__space_1_1_evaluate_a39fea1c78318d69c46a8aa6a402833bb}{}\label{classvector__space_1_1_evaluate_a39fea1c78318d69c46a8aa6a402833bb}
+
+\item 
+{\bfseries doc2idx}\hypertarget{classvector__space_1_1_evaluate_afc5e4d8c38259c74dafaf897b1b85a8b}{}\label{classvector__space_1_1_evaluate_afc5e4d8c38259c74dafaf897b1b85a8b}
+
+\item 
+{\bfseries scores}\hypertarget{classvector__space_1_1_evaluate_af026d7004916dc38c845e4280b24cbd6}{}\label{classvector__space_1_1_evaluate_af026d7004916dc38c845e4280b24cbd6}
+
+\item 
+{\bfseries top10}\hypertarget{classvector__space_1_1_evaluate_a8e95a5f443892a2d8887f8ebc90476e3}{}\label{classvector__space_1_1_evaluate_a8e95a5f443892a2d8887f8ebc90476e3}
+
+\item 
+{\bfseries suggested\+\_\+docs}\hypertarget{classvector__space_1_1_evaluate_aa0eb502dc1bc16f2c190d744b08cd35c}{}\label{classvector__space_1_1_evaluate_aa0eb502dc1bc16f2c190d744b08cd35c}
+
+\item 
+{\bfseries pair}\hypertarget{classvector__space_1_1_evaluate_a758e7d619ba10d43b691c12a43a1a1be}{}\label{classvector__space_1_1_evaluate_a758e7d619ba10d43b691c12a43a1a1be}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Class to evaluate scores based on tf-idf weights and determine similarity
+between documents and the query to return as well as determining keywords 
+relevant to each document.
+
+Initializer takes in two inputs, a data-structure, 'trie', and a doc2idx dictionary, 
+containing mappings of document names to unique integer values.
+
+>>> e = Evaluate()\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{vector\+\_\+space\+::\+Evaluate@{vector\+\_\+space\+::\+Evaluate}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!vector\+\_\+space\+::\+Evaluate@{vector\+\_\+space\+::\+Evaluate}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self, trie, doc2idx)}{__init__(self, trie, doc2idx)}}]{\setlength{\rightskip}{0pt plus 5cm}def vector\+\_\+space.\+Evaluate.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{trie, }
+\item[{}]{doc2idx}
+\end{DoxyParamCaption}
+)}\hypertarget{classvector__space_1_1_evaluate_a0e393062023dc2594bf9c76854f08185}{}\label{classvector__space_1_1_evaluate_a0e393062023dc2594bf9c76854f08185}
+\begin{DoxyVerb}Initializer for the Evaluate class.
+
+Parameters
+----------
+trie - Data structure to query words and fetch idf scores
+doc2idx - Dictionary containing mapping between document names and unique identifiers(integers)
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\index{vector\+\_\+space\+::\+Evaluate@{vector\+\_\+space\+::\+Evaluate}!fetch\+\_\+keywords@{fetch\+\_\+keywords}}
+\index{fetch\+\_\+keywords@{fetch\+\_\+keywords}!vector\+\_\+space\+::\+Evaluate@{vector\+\_\+space\+::\+Evaluate}}
+\subsubsection[{\texorpdfstring{fetch\+\_\+keywords(self, doc\+\_\+text, threshold=10)}{fetch_keywords(self, doc_text, threshold=10)}}]{\setlength{\rightskip}{0pt plus 5cm}def vector\+\_\+space.\+Evaluate.\+fetch\+\_\+keywords (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{doc\+\_\+text, }
+\item[{}]{threshold = {\ttfamily 10}}
+\end{DoxyParamCaption}
+)}\hypertarget{classvector__space_1_1_evaluate_ac561d193195b176f1661334c8c42336b}{}\label{classvector__space_1_1_evaluate_ac561d193195b176f1661334c8c42336b}
+\begin{DoxyVerb}Fetch keywords from the document, i.e. the words withing the document with the highest
+tf-idf score. Higher score means these words better describe this document.
+
+Parameters
+----------
+doc_text = list of tokenized text from the document
+threshold = minimum score for the word(token) for it to be considered a keyword.
+
+Return
+------
+Dictionary with keys as the keywords and values as the scores.
+\end{DoxyVerb}
+ \index{vector\+\_\+space\+::\+Evaluate@{vector\+\_\+space\+::\+Evaluate}!get\+\_\+relevant\+\_\+docs@{get\+\_\+relevant\+\_\+docs}}
+\index{get\+\_\+relevant\+\_\+docs@{get\+\_\+relevant\+\_\+docs}!vector\+\_\+space\+::\+Evaluate@{vector\+\_\+space\+::\+Evaluate}}
+\subsubsection[{\texorpdfstring{get\+\_\+relevant\+\_\+docs(self, query, n=10)}{get_relevant_docs(self, query, n=10)}}]{\setlength{\rightskip}{0pt plus 5cm}def vector\+\_\+space.\+Evaluate.\+get\+\_\+relevant\+\_\+docs (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{query, }
+\item[{}]{n = {\ttfamily 10}}
+\end{DoxyParamCaption}
+)}\hypertarget{classvector__space_1_1_evaluate_aafcdd9a278f5cb4305d53b1c977c372d}{}\label{classvector__space_1_1_evaluate_aafcdd9a278f5cb4305d53b1c977c372d}
+\begin{DoxyVerb}fetch the relevant n documents by calculating cosine similarity between the documents
+and the search query.
+
+Parameters
+----------
+query = list of query terms (tokenized and preprocessed returned from the server)
+n = total number of documents to be returned.
+
+Return
+------
+n relevant documents with the top similarity score
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/shubham/\+Desktop/re\+S\+E\+A\+R\+C\+H-\/master/src/vector\+\_\+space.\+py\end{DoxyCompactItemize}

@@ -2,6 +2,7 @@
 Research Paper Information Retrieval System using Python.
 
 Course Assignment for CS F469- Information Retrieval @ BITS Pilani, Hyderabad Campus.
+
 **Done under the able guidance of Dr. Aruna Malapati, Assistant Professor, BITS Pilani, Hyderabad Campus.**
 
 ## Table of Contents
@@ -18,8 +19,7 @@ Course Assignment for CS F469- Information Retrieval @ BITS Pilani, Hyderabad Ca
   * [Tf-Idf formulation](#tf-idf-formulation)
   * [Machine specs](#machine-specs-)
   * [Results](#results)
-  * [Web client Documentation](#web-client-documentation)
-  * [Further Scope](#further-scope)
+  * [Screenshots](#screenshots)
   * [Members](#members)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
@@ -27,22 +27,19 @@ Course Assignment for CS F469- Information Retrieval @ BITS Pilani, Hyderabad Ca
 
 ##### Running the scraper
 ```python
-pip install clairvoyant
+python scraper.py
 ```
 
 ##### Starting the web server
 ```python
-pip install clairvoyant
+python run.py
 ```
 
 ##### Building and saving a new trie
 ```python
-pip install clairvoyant
-```
-
-##### Loading a constructed trie
-```python
-pip install clairvoyant
+python create_trie.py l #lemmatized tokens
+python create_trie.py s #stemmed tokens
+python create_trie.py n #no stemming/lemmatization
 ```
 
 ## Introduction
@@ -98,15 +95,27 @@ OS: Ubuntu 16.04 LTS
 ## Results
 Index building time: 76.97 s.
 Memory usage: around 410 MB.
-Average time of query search: 
 
-## Web client Documentation
-**Insert screenshots**
+## Screenshots
 
-## Further Scope
+![alt text][logo]
+
+[logo]: time.JPG "Logo Title Text 2"
+
+![alt text][logo1]
+
+[logo1]: results.JPG "Logo Title Text 2"
+
+![alt text][logo2]
+
+[logo2]: suggestions.JPG "Logo Title Text 2"
+
+![alt text][logo3]
+
+[logo3]: docview.JPG "Logo Title Text 2"
 
 ## Members
 [Shubham Jha](github.com/shubhamjha97)
 [Praneet Mehta](github.com/praneetmehta)
 [Abhinav Jain](github.com/abhinav1112)
-[Papa](http://github.com/stgstg27)
+[Saurabh Khandelwal](http://github.com/stgstg27)
