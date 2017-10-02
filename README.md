@@ -119,28 +119,28 @@ Retrieval time statistics:
 
 ![alt text][logo]
 
-[logo]: time.JPG "Logo Title Text 2"
+[logo]: img/time.JPG "Logo Title Text 2"
 
 ---
 
 Search results:
 ![alt text][logo1]
 
-[logo1]: results.JPG "Logo Title Text 2"
+[logo1]: img/results.JPG "Logo Title Text 2"
 
 ---
 
 Search suggestions:
 ![alt text][logo2]
 
-[logo2]: suggestions.JPG "Logo Title Text 2"
+[logo2]: img/suggestions.JPG "Logo Title Text 2"
 
 ---
 
 Document view:
 ![alt text][logo3]
 
-[logo3]: docview.JPG "Logo Title Text 2"
+[logo3]: img/docview.JPG "Logo Title Text 2"
 
 ## Members
 [Shubham Jha](github.com/shubhamjha97)
