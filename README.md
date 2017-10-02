@@ -54,28 +54,29 @@ A tf-idf based Search Engine for research papers on Arxiv. The main purpose of t
 ## Data
 The data has been scraped from [Arxiv](https://arxiv.org). The scraper is present in *scraper.py* which can be found in the directory *scraper*.
 
-We use the following data  of **16000** papers from all categories present on Arxiv:
+We use the following data  of papers from all categories present on Arxiv:
 1. Title
 2. Abstract
 3. Authors
 4. Subjects
 
 **Total terms in vocabulary = 38773.**
+**Total documents in corpus = 15686.**
 ***Note**: Only Abstract data has been used for searching.*
 
 The data is organized into directories as follows:
 
 Data/
 
-├── abstracts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   # text files containing the abstract
+├── abstracts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   (text files containing the abstract)
 
-├── authors     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# text files containing authors 
+├── authors     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (text files containing authors) 
 
-├── link       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # text files containing link to the pdf of the paper
+├── link       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (text files containing link to the pdf of the paper)
 
-├── subject     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# text files containing subjects
+├── subject     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (text files containing subjects)
 
-└── title       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# text files containing the title 
+└── title       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (text files containing the title) 
 
 
 ## Text Preprocessing
@@ -105,7 +106,11 @@ Ram: 8 GB DDR4
 OS: Ubuntu 16.04 LTS
 
 ## Results
-Index building time: 76.97 s.
+Index building time:
+    * No stemming/lemmatization - 41.67s
+    * Lemmatized text - 76.97s
+    * Stemmed text - 146.13 s
+
 Memory usage: around 410 MB.
 
 ## Screenshots
