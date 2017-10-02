@@ -6,6 +6,7 @@ Course Assignment for CS F469- Information Retrieval @ BITS Pilani, Hyderabad Ca
 **Done under the able guidance of Dr. Aruna Malapati, Assistant Professor, BITS Pilani, Hyderabad Campus.**
 
 ## Table of Contents
+ * [Design Document](https://github.com/praneetmehta/reSEARCH/blob/gh-pages/Design%20Document.pdf) 
  * [reSEARCH](#research)
     * [Running the scraper](#running-the-scraper)
     * [Text pre-processing](#text-pre-processing)
