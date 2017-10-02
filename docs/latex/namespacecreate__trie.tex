@@ -1,0 +1,53 @@
+\hypertarget{namespacecreate__trie}{}\section{create\+\_\+trie Namespace Reference}
+\label{namespacecreate__trie}\index{create\+\_\+trie@{create\+\_\+trie}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacecreate__trie_a9338168a517e921ea77908dc05081b08}{processor} = \hyperlink{classtextpreprocess_1_1_process}{textpreprocess.\+Process}(sys.\+argv\mbox{[}1\mbox{]})
+\item 
+string \hyperlink{namespacecreate__trie_a430ef8eaeeaf47147c83447c0a4126bc}{filename} = \textquotesingle{}trie\+\_\+\textquotesingle{}
+\item 
+\hyperlink{namespacecreate__trie_a41f1ff7b2420aeb95360264a00701e6c}{tr} = \hyperlink{classtrie_1_1_trie}{Trie}()
+\item 
+\hyperlink{namespacecreate__trie_ad979a10ba749c867088265cbcb65e168}{directory} = os.\+path.\+join(\textquotesingle{}../Unstructured\+\_\+\textquotesingle{},\textquotesingle{}abstract\+\_\+\textquotesingle{})
+\item 
+\hyperlink{namespacecreate__trie_ad27168f07283984f7da7afcb2cb9c7fa}{filelist} = os.\+listdir(\hyperlink{namespacecreate__trie_ad979a10ba749c867088265cbcb65e168}{directory})
+\item 
+\hyperlink{namespacecreate__trie_a16d2378d2d7fd59088a9721ad77da106}{start\+\_\+time} = time()
+\item 
+\hyperlink{namespacecreate__trie_a37f17bf189828d28800bf79f7cb9b9a9}{tokens} = processor.\+process\+Text(file.\+read())
+\item 
+int \hyperlink{namespacecreate__trie_a17ca012774362c641290dcc4ed707618}{normalization\+\_\+factor} = 1
+\item 
+\hyperlink{namespacecreate__trie_a1cfb0e74650de85b305af8d0471c199e}{temp} = Counter(\hyperlink{namespacecreate__trie_a37f17bf189828d28800bf79f7cb9b9a9}{tokens})
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{create\+\_\+trie@{create\+\_\+trie}!directory@{directory}}
+\index{directory@{directory}!create\+\_\+trie@{create\+\_\+trie}}
+\subsubsection[{\texorpdfstring{directory}{directory}}]{\setlength{\rightskip}{0pt plus 5cm}create\+\_\+trie.\+directory = os.\+path.\+join(\textquotesingle{}../Unstructured\+\_\+\textquotesingle{},\textquotesingle{}abstract\+\_\+\textquotesingle{})}\hypertarget{namespacecreate__trie_ad979a10ba749c867088265cbcb65e168}{}\label{namespacecreate__trie_ad979a10ba749c867088265cbcb65e168}
+\index{create\+\_\+trie@{create\+\_\+trie}!filelist@{filelist}}
+\index{filelist@{filelist}!create\+\_\+trie@{create\+\_\+trie}}
+\subsubsection[{\texorpdfstring{filelist}{filelist}}]{\setlength{\rightskip}{0pt plus 5cm}create\+\_\+trie.\+filelist = os.\+listdir({\bf directory})}\hypertarget{namespacecreate__trie_ad27168f07283984f7da7afcb2cb9c7fa}{}\label{namespacecreate__trie_ad27168f07283984f7da7afcb2cb9c7fa}
+\index{create\+\_\+trie@{create\+\_\+trie}!filename@{filename}}
+\index{filename@{filename}!create\+\_\+trie@{create\+\_\+trie}}
+\subsubsection[{\texorpdfstring{filename}{filename}}]{\setlength{\rightskip}{0pt plus 5cm}string create\+\_\+trie.\+filename = \textquotesingle{}trie\+\_\+\textquotesingle{}}\hypertarget{namespacecreate__trie_a430ef8eaeeaf47147c83447c0a4126bc}{}\label{namespacecreate__trie_a430ef8eaeeaf47147c83447c0a4126bc}
+\index{create\+\_\+trie@{create\+\_\+trie}!normalization\+\_\+factor@{normalization\+\_\+factor}}
+\index{normalization\+\_\+factor@{normalization\+\_\+factor}!create\+\_\+trie@{create\+\_\+trie}}
+\subsubsection[{\texorpdfstring{normalization\+\_\+factor}{normalization_factor}}]{\setlength{\rightskip}{0pt plus 5cm}int create\+\_\+trie.\+normalization\+\_\+factor = 1}\hypertarget{namespacecreate__trie_a17ca012774362c641290dcc4ed707618}{}\label{namespacecreate__trie_a17ca012774362c641290dcc4ed707618}
+\index{create\+\_\+trie@{create\+\_\+trie}!processor@{processor}}
+\index{processor@{processor}!create\+\_\+trie@{create\+\_\+trie}}
+\subsubsection[{\texorpdfstring{processor}{processor}}]{\setlength{\rightskip}{0pt plus 5cm}create\+\_\+trie.\+processor = {\bf textpreprocess.\+Process}(sys.\+argv\mbox{[}1\mbox{]})}\hypertarget{namespacecreate__trie_a9338168a517e921ea77908dc05081b08}{}\label{namespacecreate__trie_a9338168a517e921ea77908dc05081b08}
+\index{create\+\_\+trie@{create\+\_\+trie}!start\+\_\+time@{start\+\_\+time}}
+\index{start\+\_\+time@{start\+\_\+time}!create\+\_\+trie@{create\+\_\+trie}}
+\subsubsection[{\texorpdfstring{start\+\_\+time}{start_time}}]{\setlength{\rightskip}{0pt plus 5cm}create\+\_\+trie.\+start\+\_\+time = time()}\hypertarget{namespacecreate__trie_a16d2378d2d7fd59088a9721ad77da106}{}\label{namespacecreate__trie_a16d2378d2d7fd59088a9721ad77da106}
+\index{create\+\_\+trie@{create\+\_\+trie}!temp@{temp}}
+\index{temp@{temp}!create\+\_\+trie@{create\+\_\+trie}}
+\subsubsection[{\texorpdfstring{temp}{temp}}]{\setlength{\rightskip}{0pt plus 5cm}create\+\_\+trie.\+temp = Counter({\bf tokens})}\hypertarget{namespacecreate__trie_a1cfb0e74650de85b305af8d0471c199e}{}\label{namespacecreate__trie_a1cfb0e74650de85b305af8d0471c199e}
+\index{create\+\_\+trie@{create\+\_\+trie}!tokens@{tokens}}
+\index{tokens@{tokens}!create\+\_\+trie@{create\+\_\+trie}}
+\subsubsection[{\texorpdfstring{tokens}{tokens}}]{\setlength{\rightskip}{0pt plus 5cm}create\+\_\+trie.\+tokens = processor.\+process\+Text(file.\+read())}\hypertarget{namespacecreate__trie_a37f17bf189828d28800bf79f7cb9b9a9}{}\label{namespacecreate__trie_a37f17bf189828d28800bf79f7cb9b9a9}
+\index{create\+\_\+trie@{create\+\_\+trie}!tr@{tr}}
+\index{tr@{tr}!create\+\_\+trie@{create\+\_\+trie}}
+\subsubsection[{\texorpdfstring{tr}{tr}}]{\setlength{\rightskip}{0pt plus 5cm}create\+\_\+trie.\+tr = {\bf Trie}()}\hypertarget{namespacecreate__trie_a41f1ff7b2420aeb95360264a00701e6c}{}\label{namespacecreate__trie_a41f1ff7b2420aeb95360264a00701e6c}

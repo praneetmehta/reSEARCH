@@ -1,0 +1,86 @@
+\hypertarget{namespaceapp_1_1sockets}{}\section{app.\+sockets Namespace Reference}
+\label{namespaceapp_1_1sockets}\index{app.\+sockets@{app.\+sockets}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceapp_1_1sockets_a245f18896915d69240e80005f88784d3}{handle\+\_\+connection} (data)
+\item 
+def \hyperlink{namespaceapp_1_1sockets_a5173060f6fc0a7732f1a6ba3cf643e87}{handle\+\_\+disconnect} ()
+\item 
+def \hyperlink{namespaceapp_1_1sockets_a20fdd1735ab60df72510298f457dbce8}{handle\+\_\+typing} (query)
+\item 
+def \hyperlink{namespaceapp_1_1sockets_adf8b1e161cef565b4c571b08e9be749a}{search\+\_\+for\+\_\+query} (data)
+\item 
+def \hyperlink{namespaceapp_1_1sockets_ac2893b54837e0c0eb79ba640fb4e25ab}{get\+\_\+res} (res, user\+\_\+sid)
+\item 
+def \hyperlink{namespaceapp_1_1sockets_a9aa9ab12de2f82eeb49b68f348284531}{fetch\+\_\+docs} (query, user\+\_\+sid)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespaceapp_1_1sockets_afd959a0ffb7e2ec366c577798a5a3983}{users} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{app\+::sockets@{app\+::sockets}!fetch\+\_\+docs@{fetch\+\_\+docs}}
+\index{fetch\+\_\+docs@{fetch\+\_\+docs}!app\+::sockets@{app\+::sockets}}
+\subsubsection[{\texorpdfstring{fetch\+\_\+docs(query, user\+\_\+sid)}{fetch_docs(query, user_sid)}}]{\setlength{\rightskip}{0pt plus 5cm}def app.\+sockets.\+fetch\+\_\+docs (
+\begin{DoxyParamCaption}
+\item[{}]{query, }
+\item[{}]{user\+\_\+sid}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceapp_1_1sockets_a9aa9ab12de2f82eeb49b68f348284531}{}\label{namespaceapp_1_1sockets_a9aa9ab12de2f82eeb49b68f348284531}
+\begin{DoxyVerb}HIT the REST endpoint for document retrieval and 
+    emit the update_results event \end{DoxyVerb}
+ \index{app\+::sockets@{app\+::sockets}!get\+\_\+res@{get\+\_\+res}}
+\index{get\+\_\+res@{get\+\_\+res}!app\+::sockets@{app\+::sockets}}
+\subsubsection[{\texorpdfstring{get\+\_\+res(res, user\+\_\+sid)}{get_res(res, user_sid)}}]{\setlength{\rightskip}{0pt plus 5cm}def app.\+sockets.\+get\+\_\+res (
+\begin{DoxyParamCaption}
+\item[{}]{res, }
+\item[{}]{user\+\_\+sid}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceapp_1_1sockets_ac2893b54837e0c0eb79ba640fb4e25ab}{}\label{namespaceapp_1_1sockets_ac2893b54837e0c0eb79ba640fb4e25ab}
+\begin{DoxyVerb}Hit the REST endpoint for word suggestion and fetch 
+    and emit update_suggestions event \end{DoxyVerb}
+ \index{app\+::sockets@{app\+::sockets}!handle\+\_\+connection@{handle\+\_\+connection}}
+\index{handle\+\_\+connection@{handle\+\_\+connection}!app\+::sockets@{app\+::sockets}}
+\subsubsection[{\texorpdfstring{handle\+\_\+connection(data)}{handle_connection(data)}}]{\setlength{\rightskip}{0pt plus 5cm}def app.\+sockets.\+handle\+\_\+connection (
+\begin{DoxyParamCaption}
+\item[{}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceapp_1_1sockets_a245f18896915d69240e80005f88784d3}{}\label{namespaceapp_1_1sockets_a245f18896915d69240e80005f88784d3}
+\begin{DoxyVerb}Handle user connection event and
+    update the user count \end{DoxyVerb}
+ \index{app\+::sockets@{app\+::sockets}!handle\+\_\+disconnect@{handle\+\_\+disconnect}}
+\index{handle\+\_\+disconnect@{handle\+\_\+disconnect}!app\+::sockets@{app\+::sockets}}
+\subsubsection[{\texorpdfstring{handle\+\_\+disconnect()}{handle_disconnect()}}]{\setlength{\rightskip}{0pt plus 5cm}def app.\+sockets.\+handle\+\_\+disconnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceapp_1_1sockets_a5173060f6fc0a7732f1a6ba3cf643e87}{}\label{namespaceapp_1_1sockets_a5173060f6fc0a7732f1a6ba3cf643e87}
+\begin{DoxyVerb}Handle the user disconnect event and
+    update the user count \end{DoxyVerb}
+ \index{app\+::sockets@{app\+::sockets}!handle\+\_\+typing@{handle\+\_\+typing}}
+\index{handle\+\_\+typing@{handle\+\_\+typing}!app\+::sockets@{app\+::sockets}}
+\subsubsection[{\texorpdfstring{handle\+\_\+typing(query)}{handle_typing(query)}}]{\setlength{\rightskip}{0pt plus 5cm}def app.\+sockets.\+handle\+\_\+typing (
+\begin{DoxyParamCaption}
+\item[{}]{query}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceapp_1_1sockets_a20fdd1735ab60df72510298f457dbce8}{}\label{namespaceapp_1_1sockets_a20fdd1735ab60df72510298f457dbce8}
+\begin{DoxyVerb}Handle typing event emitted by the client
+    and provide provide suggestions \end{DoxyVerb}
+ \index{app\+::sockets@{app\+::sockets}!search\+\_\+for\+\_\+query@{search\+\_\+for\+\_\+query}}
+\index{search\+\_\+for\+\_\+query@{search\+\_\+for\+\_\+query}!app\+::sockets@{app\+::sockets}}
+\subsubsection[{\texorpdfstring{search\+\_\+for\+\_\+query(data)}{search_for_query(data)}}]{\setlength{\rightskip}{0pt plus 5cm}def app.\+sockets.\+search\+\_\+for\+\_\+query (
+\begin{DoxyParamCaption}
+\item[{}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceapp_1_1sockets_adf8b1e161cef565b4c571b08e9be749a}{}\label{namespaceapp_1_1sockets_adf8b1e161cef565b4c571b08e9be749a}
+\begin{DoxyVerb}Handle query submit and document retrieval calls\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\index{app\+::sockets@{app\+::sockets}!users@{users}}
+\index{users@{users}!app\+::sockets@{app\+::sockets}}
+\subsubsection[{\texorpdfstring{users}{users}}]{\setlength{\rightskip}{0pt plus 5cm}int app.\+sockets.\+users = 0}\hypertarget{namespaceapp_1_1sockets_afd959a0ffb7e2ec366c577798a5a3983}{}\label{namespaceapp_1_1sockets_afd959a0ffb7e2ec366c577798a5a3983}

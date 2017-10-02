@@ -1,0 +1,167 @@
+\hypertarget{namespacescraper}{}\section{scraper Namespace Reference}
+\label{namespacescraper}\index{scraper@{scraper}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classscraper_1_1_writer}{Writer}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacescraper_a27f87ebb14485929bcd1982a27778d50}{writetofile} (dom, prev\+\_\+sibling, \hyperlink{namespacescraper_a2b868827f0fdbf8e5deff7fd8866ae2f}{H\+E\+A\+D\+E\+RS})
+\item 
+def \hyperlink{namespacescraper_aeb86f98f931e90255baf4fb49910864e}{homepage} (\hyperlink{namespacescraper_a60a59c7182708d1f2fdee75dd2a88e7d}{U\+RL}, \hyperlink{namespacescraper_a35fba8057dccafa1d2dc0c57018daaaa}{P\+A\+R\+S\+ER})
+\item 
+def \hyperlink{namespacescraper_a26b10fad0e94d8efd9f2898428bac030}{pprint} (item)
+\item 
+def \hyperlink{namespacescraper_a0a6f585850b06a4c6b484f8fd7abfa8b}{pickproxy} ()
+\item 
+def \hyperlink{namespacescraper_a2f3fce865692325e0b43867aa8f22fcb}{visitlink} (link, rooturl)
+\item 
+def \hyperlink{namespacescraper_ab4945d28c3c62df4daf0e3feedd2bd14}{data\+\_\+fetch} (link, \hyperlink{namespacescraper_a35fba8057dccafa1d2dc0c57018daaaa}{P\+A\+R\+S\+ER}, \hyperlink{namespacescraper_a2b868827f0fdbf8e5deff7fd8866ae2f}{H\+E\+A\+D\+E\+RS})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespacescraper_af659a7bd047bbe1870120786cce2d626}{error\+\_\+count} = 0
+\item 
+int \hyperlink{namespacescraper_a331841d7f781aa037b4798c8b96fa6d4}{num} = 0
+\item 
+int \hyperlink{namespacescraper_aea7e8854e09bfb4f0ea3454480b6e48a}{filenumber} = 10001
+\item 
+int \hyperlink{namespacescraper_a4b0a29417be87040f80007db33c60423}{S\+H\+O\+W\+\_\+\+C\+O\+U\+NT} = 200
+\item 
+list \hyperlink{namespacescraper_a2e27301d601227a988938abb0f78236f}{R\+E\+A\+T\+T\+E\+M\+P\+TS} = \mbox{[}$\,$\mbox{]}
+\item 
+string \hyperlink{namespacescraper_a60a59c7182708d1f2fdee75dd2a88e7d}{U\+RL} = \textquotesingle{}https\+://arxiv.\+org/\textquotesingle{}
+\item 
+string \hyperlink{namespacescraper_a35fba8057dccafa1d2dc0c57018daaaa}{P\+A\+R\+S\+ER} = \textquotesingle{}html.\+parser\textquotesingle{}
+\item 
+dictionary \hyperlink{namespacescraper_a2b868827f0fdbf8e5deff7fd8866ae2f}{H\+E\+A\+D\+E\+RS} = \{\textquotesingle{}User-\/Agent\textquotesingle{}\+: \textquotesingle{}Mozilla/5.\+0 (Macintosh; Intel Mac OS X 10\+\_\+10\+\_\+1) Apple\+Web\+Kit/537.\+36 (\+K\+H\+T\+M\+L, like Gecko) Chrome/39.\+0.\+2171.\+95 Safari/537.\+36\textquotesingle{}\}
+\item 
+\hyperlink{namespacescraper_a26e907fd56e5fdee79f84a5e664fd863}{archive\+\_\+links} = \hyperlink{namespacescraper_aeb86f98f931e90255baf4fb49910864e}{homepage}(\hyperlink{namespacescraper_a60a59c7182708d1f2fdee75dd2a88e7d}{U\+RL}, \hyperlink{namespacescraper_a35fba8057dccafa1d2dc0c57018daaaa}{P\+A\+R\+S\+ER})
+\item 
+bool \hyperlink{namespacescraper_a4aaf6d11bb8b81670a9f26121befb435}{start} = False
+\item 
+int \hyperlink{namespacescraper_a7716e2d7e7879e1cadb7839b0a1533c7}{skip} = 0
+\item 
+\hyperlink{namespacescraper_a1e2bdd0d9a1a63195db7a2da89193e40}{text} = file.\+read()
+\item 
+\hyperlink{namespacescraper_a704a8e4e62c4c51619d753bf4d29849b}{donelink} = text.\+split(\textquotesingle{}\textbackslash{}n\textquotesingle{})\mbox{[}0\mbox{]}
+\item 
+\hyperlink{namespacescraper_a47a1d6b32bb0e513526577f7127a2a63}{res} = requests.\+get(link\mbox{[}0\mbox{]}).\hyperlink{namespacescraper_a1e2bdd0d9a1a63195db7a2da89193e40}{text}
+\item 
+\hyperlink{namespacescraper_ad6cfc9d30061447ff55ebab4cf14ad49}{M\+AX} = int(bs(\hyperlink{namespacescraper_a47a1d6b32bb0e513526577f7127a2a63}{res}, \textquotesingle{}html.\+parser\textquotesingle{}).\hyperlink{jquery-3_82_81_8js_a55fc855d7b79b5914e96c09c3d1e2651}{find}(\textquotesingle{}small\textquotesingle{}).find\+\_\+all(\textquotesingle{}a\textquotesingle{})\mbox{[}-\/1\mbox{]}.text.\+split(\textquotesingle{}-\/\textquotesingle{})\mbox{[}-\/1\mbox{]})
+\item 
+\hyperlink{namespacescraper_a45d2ebfdc67be7ce1963c8176262be5d}{temp\+\_\+store} = link\mbox{[}0\mbox{]}.split(\textquotesingle{}/\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{scraper@{scraper}!data\+\_\+fetch@{data\+\_\+fetch}}
+\index{data\+\_\+fetch@{data\+\_\+fetch}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{data\+\_\+fetch(link, P\+A\+R\+S\+E\+R, H\+E\+A\+D\+E\+R\+S)}{data_fetch(link, PARSER, HEADERS)}}]{\setlength{\rightskip}{0pt plus 5cm}def scraper.\+data\+\_\+fetch (
+\begin{DoxyParamCaption}
+\item[{}]{link, }
+\item[{}]{P\+A\+R\+S\+ER, }
+\item[{}]{H\+E\+A\+D\+E\+RS}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacescraper_ab4945d28c3c62df4daf0e3feedd2bd14}{}\label{namespacescraper_ab4945d28c3c62df4daf0e3feedd2bd14}
+\begin{DoxyVerb}Fetch the data from the page at the bottom of scraping tree\end{DoxyVerb}
+ \index{scraper@{scraper}!homepage@{homepage}}
+\index{homepage@{homepage}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{homepage(\+U\+R\+L, P\+A\+R\+S\+E\+R)}{homepage(URL, PARSER)}}]{\setlength{\rightskip}{0pt plus 5cm}def scraper.\+homepage (
+\begin{DoxyParamCaption}
+\item[{}]{U\+RL, }
+\item[{}]{P\+A\+R\+S\+ER}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacescraper_aeb86f98f931e90255baf4fb49910864e}{}\label{namespacescraper_aeb86f98f931e90255baf4fb49910864e}
+\begin{DoxyVerb}Gather the categories from the home page of the website
+    arxive.org and also gather the forwarding links\end{DoxyVerb}
+ \index{scraper@{scraper}!pickproxy@{pickproxy}}
+\index{pickproxy@{pickproxy}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{pickproxy()}{pickproxy()}}]{\setlength{\rightskip}{0pt plus 5cm}def scraper.\+pickproxy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacescraper_a0a6f585850b06a4c6b484f8fd7abfa8b}{}\label{namespacescraper_a0a6f585850b06a4c6b484f8fd7abfa8b}
+\begin{DoxyVerb}Return random proxies to use\end{DoxyVerb}
+ \index{scraper@{scraper}!pprint@{pprint}}
+\index{pprint@{pprint}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{pprint(item)}{pprint(item)}}]{\setlength{\rightskip}{0pt plus 5cm}def scraper.\+pprint (
+\begin{DoxyParamCaption}
+\item[{}]{item}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacescraper_a26b10fad0e94d8efd9f2898428bac030}{}\label{namespacescraper_a26b10fad0e94d8efd9f2898428bac030}
+\begin{DoxyVerb}Pretty print the html dom tree\end{DoxyVerb}
+ \index{scraper@{scraper}!visitlink@{visitlink}}
+\index{visitlink@{visitlink}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{visitlink(link, rooturl)}{visitlink(link, rooturl)}}]{\setlength{\rightskip}{0pt plus 5cm}def scraper.\+visitlink (
+\begin{DoxyParamCaption}
+\item[{}]{link, }
+\item[{}]{rooturl}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacescraper_a2f3fce865692325e0b43867aa8f22fcb}{}\label{namespacescraper_a2f3fce865692325e0b43867aa8f22fcb}
+\begin{DoxyVerb}visit category links\end{DoxyVerb}
+ \index{scraper@{scraper}!writetofile@{writetofile}}
+\index{writetofile@{writetofile}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{writetofile(dom, prev\+\_\+sibling, H\+E\+A\+D\+E\+R\+S)}{writetofile(dom, prev_sibling, HEADERS)}}]{\setlength{\rightskip}{0pt plus 5cm}def scraper.\+writetofile (
+\begin{DoxyParamCaption}
+\item[{}]{dom, }
+\item[{}]{prev\+\_\+sibling, }
+\item[{}]{H\+E\+A\+D\+E\+RS}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacescraper_a27f87ebb14485929bcd1982a27778d50}{}\label{namespacescraper_a27f87ebb14485929bcd1982a27778d50}
+\begin{DoxyVerb}Function to create a writer object and invoke the write method
+    to write the various files to their respective folders\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\index{scraper@{scraper}!archive\+\_\+links@{archive\+\_\+links}}
+\index{archive\+\_\+links@{archive\+\_\+links}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{archive\+\_\+links}{archive_links}}]{\setlength{\rightskip}{0pt plus 5cm}scraper.\+archive\+\_\+links = {\bf homepage}({\bf U\+RL}, {\bf P\+A\+R\+S\+ER})}\hypertarget{namespacescraper_a26e907fd56e5fdee79f84a5e664fd863}{}\label{namespacescraper_a26e907fd56e5fdee79f84a5e664fd863}
+\index{scraper@{scraper}!donelink@{donelink}}
+\index{donelink@{donelink}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{donelink}{donelink}}]{\setlength{\rightskip}{0pt plus 5cm}scraper.\+donelink = text.\+split(\textquotesingle{}\textbackslash{}n\textquotesingle{})\mbox{[}0\mbox{]}}\hypertarget{namespacescraper_a704a8e4e62c4c51619d753bf4d29849b}{}\label{namespacescraper_a704a8e4e62c4c51619d753bf4d29849b}
+\index{scraper@{scraper}!error\+\_\+count@{error\+\_\+count}}
+\index{error\+\_\+count@{error\+\_\+count}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{error\+\_\+count}{error_count}}]{\setlength{\rightskip}{0pt plus 5cm}int scraper.\+error\+\_\+count = 0}\hypertarget{namespacescraper_af659a7bd047bbe1870120786cce2d626}{}\label{namespacescraper_af659a7bd047bbe1870120786cce2d626}
+\index{scraper@{scraper}!filenumber@{filenumber}}
+\index{filenumber@{filenumber}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{filenumber}{filenumber}}]{\setlength{\rightskip}{0pt plus 5cm}scraper.\+filenumber = 10001}\hypertarget{namespacescraper_aea7e8854e09bfb4f0ea3454480b6e48a}{}\label{namespacescraper_aea7e8854e09bfb4f0ea3454480b6e48a}
+\index{scraper@{scraper}!H\+E\+A\+D\+E\+RS@{H\+E\+A\+D\+E\+RS}}
+\index{H\+E\+A\+D\+E\+RS@{H\+E\+A\+D\+E\+RS}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{H\+E\+A\+D\+E\+RS}{HEADERS}}]{\setlength{\rightskip}{0pt plus 5cm}dictionary scraper.\+H\+E\+A\+D\+E\+RS = \{\textquotesingle{}User-\/Agent\textquotesingle{}\+: \textquotesingle{}Mozilla/5.\+0 (Macintosh; Intel Mac OS X 10\+\_\+10\+\_\+1) Apple\+Web\+Kit/537.\+36 (\+K\+H\+T\+M\+L, like Gecko) Chrome/39.\+0.\+2171.\+95 Safari/537.\+36\textquotesingle{}\}}\hypertarget{namespacescraper_a2b868827f0fdbf8e5deff7fd8866ae2f}{}\label{namespacescraper_a2b868827f0fdbf8e5deff7fd8866ae2f}
+\index{scraper@{scraper}!M\+AX@{M\+AX}}
+\index{M\+AX@{M\+AX}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{M\+AX}{MAX}}]{\setlength{\rightskip}{0pt plus 5cm}scraper.\+M\+AX = int(bs({\bf res}, \textquotesingle{}html.\+parser\textquotesingle{}).{\bf find}(\textquotesingle{}small\textquotesingle{}).find\+\_\+all(\textquotesingle{}a\textquotesingle{})\mbox{[}-\/1\mbox{]}.text.\+split(\textquotesingle{}-\/\textquotesingle{})\mbox{[}-\/1\mbox{]})}\hypertarget{namespacescraper_ad6cfc9d30061447ff55ebab4cf14ad49}{}\label{namespacescraper_ad6cfc9d30061447ff55ebab4cf14ad49}
+\index{scraper@{scraper}!num@{num}}
+\index{num@{num}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{num}{num}}]{\setlength{\rightskip}{0pt plus 5cm}int scraper.\+num = 0}\hypertarget{namespacescraper_a331841d7f781aa037b4798c8b96fa6d4}{}\label{namespacescraper_a331841d7f781aa037b4798c8b96fa6d4}
+\index{scraper@{scraper}!P\+A\+R\+S\+ER@{P\+A\+R\+S\+ER}}
+\index{P\+A\+R\+S\+ER@{P\+A\+R\+S\+ER}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{P\+A\+R\+S\+ER}{PARSER}}]{\setlength{\rightskip}{0pt plus 5cm}string scraper.\+P\+A\+R\+S\+ER = \textquotesingle{}html.\+parser\textquotesingle{}}\hypertarget{namespacescraper_a35fba8057dccafa1d2dc0c57018daaaa}{}\label{namespacescraper_a35fba8057dccafa1d2dc0c57018daaaa}
+\index{scraper@{scraper}!R\+E\+A\+T\+T\+E\+M\+P\+TS@{R\+E\+A\+T\+T\+E\+M\+P\+TS}}
+\index{R\+E\+A\+T\+T\+E\+M\+P\+TS@{R\+E\+A\+T\+T\+E\+M\+P\+TS}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{R\+E\+A\+T\+T\+E\+M\+P\+TS}{REATTEMPTS}}]{\setlength{\rightskip}{0pt plus 5cm}list scraper.\+R\+E\+A\+T\+T\+E\+M\+P\+TS = \mbox{[}$\,$\mbox{]}}\hypertarget{namespacescraper_a2e27301d601227a988938abb0f78236f}{}\label{namespacescraper_a2e27301d601227a988938abb0f78236f}
+\index{scraper@{scraper}!res@{res}}
+\index{res@{res}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{res}{res}}]{\setlength{\rightskip}{0pt plus 5cm}scraper.\+res = requests.\+get(link\mbox{[}0\mbox{]}).{\bf text}}\hypertarget{namespacescraper_a47a1d6b32bb0e513526577f7127a2a63}{}\label{namespacescraper_a47a1d6b32bb0e513526577f7127a2a63}
+\index{scraper@{scraper}!S\+H\+O\+W\+\_\+\+C\+O\+U\+NT@{S\+H\+O\+W\+\_\+\+C\+O\+U\+NT}}
+\index{S\+H\+O\+W\+\_\+\+C\+O\+U\+NT@{S\+H\+O\+W\+\_\+\+C\+O\+U\+NT}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{S\+H\+O\+W\+\_\+\+C\+O\+U\+NT}{SHOW_COUNT}}]{\setlength{\rightskip}{0pt plus 5cm}int scraper.\+S\+H\+O\+W\+\_\+\+C\+O\+U\+NT = 200}\hypertarget{namespacescraper_a4b0a29417be87040f80007db33c60423}{}\label{namespacescraper_a4b0a29417be87040f80007db33c60423}
+\index{scraper@{scraper}!skip@{skip}}
+\index{skip@{skip}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{skip}{skip}}]{\setlength{\rightskip}{0pt plus 5cm}int scraper.\+skip = 0}\hypertarget{namespacescraper_a7716e2d7e7879e1cadb7839b0a1533c7}{}\label{namespacescraper_a7716e2d7e7879e1cadb7839b0a1533c7}
+\index{scraper@{scraper}!start@{start}}
+\index{start@{start}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{start}{start}}]{\setlength{\rightskip}{0pt plus 5cm}bool scraper.\+start = False}\hypertarget{namespacescraper_a4aaf6d11bb8b81670a9f26121befb435}{}\label{namespacescraper_a4aaf6d11bb8b81670a9f26121befb435}
+\index{scraper@{scraper}!temp\+\_\+store@{temp\+\_\+store}}
+\index{temp\+\_\+store@{temp\+\_\+store}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{temp\+\_\+store}{temp_store}}]{\setlength{\rightskip}{0pt plus 5cm}scraper.\+temp\+\_\+store = link\mbox{[}0\mbox{]}.split(\textquotesingle{}/\textquotesingle{})}\hypertarget{namespacescraper_a45d2ebfdc67be7ce1963c8176262be5d}{}\label{namespacescraper_a45d2ebfdc67be7ce1963c8176262be5d}
+\index{scraper@{scraper}!text@{text}}
+\index{text@{text}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{text}{text}}]{\setlength{\rightskip}{0pt plus 5cm}scraper.\+text = file.\+read()}\hypertarget{namespacescraper_a1e2bdd0d9a1a63195db7a2da89193e40}{}\label{namespacescraper_a1e2bdd0d9a1a63195db7a2da89193e40}
+\index{scraper@{scraper}!U\+RL@{U\+RL}}
+\index{U\+RL@{U\+RL}!scraper@{scraper}}
+\subsubsection[{\texorpdfstring{U\+RL}{URL}}]{\setlength{\rightskip}{0pt plus 5cm}string scraper.\+U\+RL = \textquotesingle{}https\+://arxiv.\+org/\textquotesingle{}}\hypertarget{namespacescraper_a60a59c7182708d1f2fdee75dd2a88e7d}{}\label{namespacescraper_a60a59c7182708d1f2fdee75dd2a88e7d}

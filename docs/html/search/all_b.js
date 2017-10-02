@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['stem',['stem',['../classtextpreprocess_1_1_process.html#a6523f58d5c1028d39e30363452044d60',1,'textpreprocess::Process']]],
-  ['suggest',['suggest',['../classtrie_1_1_node.html#af2ad8ae56effb8da0d5301f85717e599',1,'trie::Node']]]
+  ['jquery',['jQuery',['../jquery-3_82_81_8js.html#a609525712f1102566c2b03866ceb2bba',1,'jquery-3.2.1.js']]],
+  ['jquery_2d3_2e2_2e1_2ejs',['jquery-3.2.1.js',['../jquery-3_82_81_8js.html',1,'']]]
 ];

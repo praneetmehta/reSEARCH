@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['stem',['stem',['../classtextpreprocess_1_1_process.html#a6523f58d5c1028d39e30363452044d60',1,'textpreprocess::Process']]],
-  ['suggest',['suggest',['../classtrie_1_1_node.html#af2ad8ae56effb8da0d5301f85717e599',1,'trie::Node']]]
+  ['handle_5fconnection',['handle_connection',['../namespaceapp_1_1sockets.html#a245f18896915d69240e80005f88784d3',1,'app::sockets']]],
+  ['handle_5fdisconnect',['handle_disconnect',['../namespaceapp_1_1sockets.html#a5173060f6fc0a7732f1a6ba3cf643e87',1,'app::sockets']]],
+  ['handle_5ftyping',['handle_typing',['../namespaceapp_1_1sockets.html#a20fdd1735ab60df72510298f457dbce8',1,'app::sockets']]],
+  ['homepage',['homepage',['../namespacescraper.html#aeb86f98f931e90255baf4fb49910864e',1,'scraper']]]
 ];

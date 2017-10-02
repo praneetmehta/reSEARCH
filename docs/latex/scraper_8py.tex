@@ -1,0 +1,62 @@
+\hypertarget{scraper_8py}{}\section{src/scraper/scraper.py File Reference}
+\label{scraper_8py}\index{src/scraper/scraper.\+py@{src/scraper/scraper.\+py}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classscraper_1_1_writer}{scraper.\+Writer}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacescraper}{scraper}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacescraper_a27f87ebb14485929bcd1982a27778d50}{scraper.\+writetofile} (dom, prev\+\_\+sibling, H\+E\+A\+D\+E\+RS)
+\item 
+def \hyperlink{namespacescraper_aeb86f98f931e90255baf4fb49910864e}{scraper.\+homepage} (U\+RL, P\+A\+R\+S\+ER)
+\item 
+def \hyperlink{namespacescraper_a26b10fad0e94d8efd9f2898428bac030}{scraper.\+pprint} (item)
+\item 
+def \hyperlink{namespacescraper_a0a6f585850b06a4c6b484f8fd7abfa8b}{scraper.\+pickproxy} ()
+\item 
+def \hyperlink{namespacescraper_a2f3fce865692325e0b43867aa8f22fcb}{scraper.\+visitlink} (link, rooturl)
+\item 
+def \hyperlink{namespacescraper_ab4945d28c3c62df4daf0e3feedd2bd14}{scraper.\+data\+\_\+fetch} (link, P\+A\+R\+S\+ER, H\+E\+A\+D\+E\+RS)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespacescraper_af659a7bd047bbe1870120786cce2d626}{scraper.\+error\+\_\+count} = 0
+\item 
+int \hyperlink{namespacescraper_a331841d7f781aa037b4798c8b96fa6d4}{scraper.\+num} = 0
+\item 
+int \hyperlink{namespacescraper_aea7e8854e09bfb4f0ea3454480b6e48a}{scraper.\+filenumber} = 10001
+\item 
+int \hyperlink{namespacescraper_a4b0a29417be87040f80007db33c60423}{scraper.\+S\+H\+O\+W\+\_\+\+C\+O\+U\+NT} = 200
+\item 
+list \hyperlink{namespacescraper_a2e27301d601227a988938abb0f78236f}{scraper.\+R\+E\+A\+T\+T\+E\+M\+P\+TS} = \mbox{[}$\,$\mbox{]}
+\item 
+string \hyperlink{namespacescraper_a60a59c7182708d1f2fdee75dd2a88e7d}{scraper.\+U\+RL} = \textquotesingle{}https\+://arxiv.\+org/\textquotesingle{}
+\item 
+string \hyperlink{namespacescraper_a35fba8057dccafa1d2dc0c57018daaaa}{scraper.\+P\+A\+R\+S\+ER} = \textquotesingle{}html.\+parser\textquotesingle{}
+\item 
+dictionary \hyperlink{namespacescraper_a2b868827f0fdbf8e5deff7fd8866ae2f}{scraper.\+H\+E\+A\+D\+E\+RS} = \{\textquotesingle{}User-\/Agent\textquotesingle{}\+: \textquotesingle{}Mozilla/5.\+0 (Macintosh; Intel Mac OS X 10\+\_\+10\+\_\+1) Apple\+Web\+Kit/537.\+36 (\+K\+H\+T\+M\+L, like Gecko) Chrome/39.\+0.\+2171.\+95 Safari/537.\+36\textquotesingle{}\}
+\item 
+\hyperlink{namespacescraper_a26e907fd56e5fdee79f84a5e664fd863}{scraper.\+archive\+\_\+links} = homepage(U\+RL, P\+A\+R\+S\+ER)
+\item 
+bool \hyperlink{namespacescraper_a4aaf6d11bb8b81670a9f26121befb435}{scraper.\+start} = False
+\item 
+int \hyperlink{namespacescraper_a7716e2d7e7879e1cadb7839b0a1533c7}{scraper.\+skip} = 0
+\item 
+\hyperlink{namespacescraper_a1e2bdd0d9a1a63195db7a2da89193e40}{scraper.\+text} = file.\+read()
+\item 
+\hyperlink{namespacescraper_a704a8e4e62c4c51619d753bf4d29849b}{scraper.\+donelink} = text.\+split(\textquotesingle{}\textbackslash{}n\textquotesingle{})\mbox{[}0\mbox{]}
+\item 
+\hyperlink{namespacescraper_a47a1d6b32bb0e513526577f7127a2a63}{scraper.\+res} = requests.\+get(link\mbox{[}0\mbox{]}).\hyperlink{jquery-3_82_81_8js_a95b91e2a7e965b381c9e803999f9d290}{text}
+\item 
+\hyperlink{namespacescraper_ad6cfc9d30061447ff55ebab4cf14ad49}{scraper.\+M\+AX} = int(bs(res, \textquotesingle{}html.\+parser\textquotesingle{}).\hyperlink{jquery-3_82_81_8js_a55fc855d7b79b5914e96c09c3d1e2651}{find}(\textquotesingle{}small\textquotesingle{}).find\+\_\+all(\textquotesingle{}a\textquotesingle{})\mbox{[}-\/1\mbox{]}.text.\+split(\textquotesingle{}-\/\textquotesingle{})\mbox{[}-\/1\mbox{]})
+\item 
+\hyperlink{namespacescraper_a45d2ebfdc67be7ce1963c8176262be5d}{scraper.\+temp\+\_\+store} = link\mbox{[}0\mbox{]}.split(\textquotesingle{}/\textquotesingle{})
+\end{DoxyCompactItemize}

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['update_5fidf',['update_idf',['../classtrie_1_1_leaf.html#aaa23c1a673b7551a8ad04a56dcc50bbc',1,'trie::Leaf']]],
-  ['update_5fleaf_5fcount',['update_leaf_count',['../classtrie_1_1_trie.html#ad9c6106b14049f789df88d70d4cf36c1',1,'trie.Trie.update_leaf_count()'],['../classtrie_1_1_node.html#af6fdb2754e8a7af36cd5ede2426a6444',1,'trie.Node.update_leaf_count()']]]
+  ['main_2ejs',['main.js',['../main_8js.html',1,'']]],
+  ['manipulationtarget',['manipulationTarget',['../jquery-3_82_81_8js.html#ac068a7c75fbadde5f474671ecedf4c66',1,'jquery-3.2.1.js']]],
+  ['marginleft',['marginLeft',['../jquery-3_82_81_8js.html#a1ef83a037ddb0cdf2dbc8d1e9d6e830e',1,'jquery-3.2.1.js']]],
+  ['max',['MAX',['../namespacescraper.html#ad6cfc9d30061447ff55ebab4cf14ad49',1,'scraper']]]
 ];

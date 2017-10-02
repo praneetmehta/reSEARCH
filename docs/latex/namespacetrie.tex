@@ -1,0 +1,67 @@
+\hypertarget{namespacetrie}{}\section{trie Namespace Reference}
+\label{namespacetrie}\index{trie@{trie}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtrie_1_1_leaf}{Leaf}
+\item 
+class \hyperlink{classtrie_1_1_node}{Node}
+\item 
+class \hyperlink{classtrie_1_1_trie}{Trie}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacetrie_a5dae35781984f053a751312d94fa919e}{save\+\_\+trie} (trie, filename)
+\item 
+def \hyperlink{namespacetrie_a9f5a9b7ff3697ab1d568b021b33163c0}{read\+\_\+trie} (filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{trie@{trie}!read\+\_\+trie@{read\+\_\+trie}}
+\index{read\+\_\+trie@{read\+\_\+trie}!trie@{trie}}
+\subsubsection[{\texorpdfstring{read\+\_\+trie(filename)}{read_trie(filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def trie.\+read\+\_\+trie (
+\begin{DoxyParamCaption}
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacetrie_a9f5a9b7ff3697ab1d568b021b33163c0}{}\label{namespacetrie_a9f5a9b7ff3697ab1d568b021b33163c0}
+\begin{DoxyVerb}Function to read a trie from disk.
+The Trie must be stored in pickled form, preferably using the function save_trie, 
+which is included in this file.
+
+Parameters
+----------
+filename : string
+The name of the file in which you wish to save the Trie.
+
+Returns
+-------
+Trie object
+Returns the Trie that has been read from disk.
+\end{DoxyVerb}
+ \index{trie@{trie}!save\+\_\+trie@{save\+\_\+trie}}
+\index{save\+\_\+trie@{save\+\_\+trie}!trie@{trie}}
+\subsubsection[{\texorpdfstring{save\+\_\+trie(trie, filename)}{save_trie(trie, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def trie.\+save\+\_\+trie (
+\begin{DoxyParamCaption}
+\item[{}]{trie, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacetrie_a5dae35781984f053a751312d94fa919e}{}\label{namespacetrie_a5dae35781984f053a751312d94fa919e}
+\begin{DoxyVerb}Function to save a trie to disk.
+The Trie must be stored in pickled form, preferably using the function save_trie, 
+which is included in this file.
+
+    Parameters
+    ----------
+    trie : Trie object
+        The trie that you wish to store to disk.
+    filename : string
+        The name of the file in which you wish to save the Trie.
+
+    Returns
+    -------
+    string
+        Returns the filename in which the trie has been saved.
+\end{DoxyVerb}
+ 
