@@ -9,7 +9,8 @@ from time import time
 def api_autoComplete():
 	''' REST-api end point for getting n word suggestions
 	based on the partial query typed by the user'''
-	partial_query = request.args.get('partial_query')
+	partial_query = (' ').join(app.config['processor'].processText(request.args.get('partial_query')))
+	# print(partial_query)
 	if(partial_query.isspace() or partial_query==''):
 		suggestions = []
 	else:
@@ -44,7 +45,7 @@ def api_fetchDocs():
 	start_time = time()
 	
 	# n relevant docs returned as per the cosine similarity
-	rel_docs = app.config['vector'].get_relevant_docs(processed_text) 
+	rel_docs = app.config['eval'].get_relevant_docs(processed_text) 
 	
 	#update retrieval time results
 	time_results['retrieval'] = 'Retrieved '+str(len(rel_docs))+' documents in:  ',str(time()-start_time) + ' seconds'
@@ -67,7 +68,7 @@ def api_fetchDocs():
 		#create a temp object with document information by reading the files
 		with open(root+'abstract_/'+doc+'.txt', 'r') as file: #read abstract
 			temp['doc_text'] = file.read()
-			keywords = app.config['vector'].fetch_keywords(temp['doc_text'])
+			keywords = app.config['eval'].fetch_keywords(temp['doc_text'])
 			temp['keywords'] = []
 			for keyword in keywords:
 				temp['keywords'].append({'key':keyword[0].title()})

@@ -5,18 +5,40 @@ import nltk
 from nltk.stem import *
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-wordnet_lemmatizer = WordNetLemmatizer()
+
 reload(sys)
 sys.setdefaultencoding('utf8')
 
 stemmer = PorterStemmer()
-stop=set(stopwords.words('english'))
+stop = set(stopwords.words('english'))
+wordnet_lemmatizer = WordNetLemmatizer()
 
 class Process:
+	''' 
+	
+	This class is used for preprocessing text in files and queries, and tokenising 
+	them after various preprocessing steps such as stemming and lemmetization
+	
+	'''
+	
 	def __init__(self, token_type='n'):
 		self.type = token_type
+	
 
 	def processFile(self, text):
+		'''
+		returns the processed files
+
+		It removes the special characters from the files, and certain expressions which were 
+		converted from the scientific symbols. It then tokenises the file and then writes 
+		the tokens into the file with length greater than 1 
+
+		:param text: the text file to be processed
+		:type text: text file
+		:returns: file
+		:rtype: text file
+		'''
+	
 		text = re.sub('[#@&}~`:_;{]', '', text)
 		text = file.replace('\\citet','').replace('\\textit','').replace('\n',' ')
 		text = re.sub('\$(.*?)\$', '', text)
@@ -27,8 +49,17 @@ class Process:
 		return text
 
 	def processText(self, text):
-		# file = (' ').join([word.lower() for word in text.split(' ') if len(word)>1])
-		# text = re.sub('[#@&}~`:_;{"]', '', text)
+		''' returns list of strings after preprocessing
+
+			used for preprocessing words for insertion in the trie and query preprocessing.
+			It converts all the characters to lower case, and uses stemming or lemetization according to need.
+			It removes all the stop words and keeps only words whose length is greater than 2.
+
+			:param text: files, query for preprocessing
+	        :type text: text file, string
+	        :returns: tokens
+	        :rtype: list of strings
+		'''
 		text = re.sub('[^a-zA-Z]', ' ', text)
 		tokens = nltk.word_tokenize(text)
 		if self.type == 's':
@@ -42,14 +73,36 @@ class Process:
 		return tokens
 	
 	def stem(self, tokens):
+		''' returns tokens after stemming
+
+			This function stems all the tokens using Porter Stemmer
+		
+			:param text: tokens
+	        :type text: list of strings
+	        :returns: stem_tokens
+	        :rtype: list of strings
+		'''
 		stem_tokens = [stemmer.stem(token) for token in tokens]
 		return stem_tokens
 
 	def lemmetize(self, tokens):
+		''' returns tokens after lemmatization
+
+			This function lemmatizes all the tokens 
+
+			:param text: tokens
+	        :type text: list of strings
+	        :returns: lemmatized
+	        :rtype: list of strings
+		'''
 		lemmetized = [wordnet_lemmatizer.lemmatize(token) for token in tokens]
 		return lemmetized
 
 	def readAndProcessFiles(self, directory=os.path.join('../Unstructured_','abstract'), directory2=os.path.join('../Unstructured_','abstract_')):
+		''' takes as input the directory from which the unprocessed files have to read and 
+			the directory onto which the new processed files will be written back.
+			If not specified, it takes the default values of input and output directories.
+		'''
 		if not os.path.exists(directory2):
 		    try:
 		        os.makedirs(directory2)

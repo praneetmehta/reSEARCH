@@ -20,7 +20,7 @@ try:
 	app.config['processor'] = textpreprocess.Process(token_type)
 	app.config['trie'] = read_trie(filename)
 	app.config['doc2idx'] = read_trie('doc2idx/doc2idx.pkl')
-	app.config['vector'] = vector_space.VectorSpaceModel(app.config['trie'], app.config['doc2idx'])
+	app.config['eval'] = vector_space.Evaluate(app.config['trie'], app.config['doc2idx'])
 
 	print('Data Loaded. Server Starting...')
 	

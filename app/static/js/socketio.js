@@ -1,4 +1,4 @@
-var socket = io.connect('http://0.0.0.0:8080');
+var socket = io.connect('http://172.16.47.29:8080');
 socket.on('connect', function() {
     socket.emit('connection', {
         data: '1 User just connected'

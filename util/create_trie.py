@@ -34,7 +34,7 @@ for f in enumerate(filelist):
 		print(f[0])
 	with open(os.path.join(directory, f[1]), 'r') as file:
 		tokens = processor.processText(file.read())
-		normalization_factor = len(tokens)  #normalize token
+		normalization_factor = 1  #normalize token
 		temp=Counter(tokens)
 		for word in temp.keys():
 			tr.check(word, f[1][:-4], temp[word]/normalization_factor)
