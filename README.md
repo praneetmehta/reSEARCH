@@ -3,7 +3,7 @@ Information Retrieval System for Research Papers using Python.
 
 Course Assignment for CS F469- Information Retrieval @ BITS Pilani, Hyderabad Campus.
 
-**Done under the able guidance of Dr. Aruna Malapati, Assistant Professor, BITS Pilani, Hyderabad Campus.**
+**Done under the guidance of Dr. Aruna Malapati, Assistant Professor, BITS Pilani, Hyderabad Campus.**
 
 ## Table of Contents
  * [Design Document](https://github.com/praneetmehta/reSEARCH/blob/gh-pages/Design%20Document.pdf) 
@@ -144,10 +144,10 @@ Document view:
 [logo3]: img/docview.JPG "Logo Title Text 2"
 
 ## Members
-[Shubham Jha](github.com/shubhamjha97)
+[Shubham Jha](http://github.com/shubhamjha97)
 
-[Praneet Mehta](github.com/praneetmehta)
+[Praneet Mehta](http://github.com/praneetmehta)
 
-[Abhinav Jain](github.com/abhinav1112)
+[Abhinav Jain](http://github.com/abhinav1112)
 
 [Saurabh Khandelwal](http://github.com/stgstg27)
