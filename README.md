@@ -3,7 +3,7 @@ Information Retrieval System for Research Papers using Python.
 
 Course Assignment for CS F469- Information Retrieval @ BITS Pilani, Hyderabad Campus.
 
-**Done under the guidance of Dr. Aruna Malapati, Assistant Professor, BITS Pilani, Hyderabad Campus.**
+**Done under the guidance of Prof. Aruna Malapati, Assistant Professor, BITS Pilani, Hyderabad Campus.**
 
 ## Table of Contents
  * [Design Document](https://github.com/praneetmehta/reSEARCH/blob/gh-pages/Design%20Document.pdf) 
